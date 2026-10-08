@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cofre-temporal"
+version = "1.0.0"
+description = "Cofre local para Windows com senha ou liberação por data."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pyzipper==0.4.0", "pycryptodomex==3.24.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pyinstaller==6.22.3"]
+
+[project.gui-scripts]
+cofre-temporal = "cofre_temporal.ui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cofre_temporal = ["vendor/LICENSE-*", "vendor/*.terms", "vendor/checksums.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

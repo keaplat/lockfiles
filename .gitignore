@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build e distribuição
+build/
+dist/
+*.spec
+*.exe
+*.zip
+*.tar.gz
+
+# Arquivos locais
+.env
+.env.*
+.idea/
+.vscode/
+*.parcial
+*.tlock
+Thumbs.db
+.DS_Store
